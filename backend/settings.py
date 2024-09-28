@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i!qsgcd@5&*a%v81v&oefj7!^np$(2*m0(bt+2e)y*z!zv48d0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://anbruchit-backend-2.onrender.com"]
+ALLOWED_HOSTS = ["anbruchit-backend-2.onrender.com"]
 
 
 # Application definition
@@ -138,7 +138,7 @@ EMAIL_HOST_PASSWORD = 'wnzn amfa arao arwa'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://anbruchit-backend-2.onrender.com",
+    "anbruchit-backend-2.onrender.com",
 ]
 
 
@@ -153,5 +153,5 @@ CORS_ALLOW_HEADERS = [
 ]
 
 ALLOWED_HOSTS = [
-    "https://anbruchit-backend-2.onrender.com",
+    "anbruchit-backend-2.onrender.com",
 ]
