@@ -138,9 +138,7 @@ EMAIL_HOST_PASSWORD = 'wnzn amfa arao arwa'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "anbruchit-backend-2.onrender.com",
-    "http://localhost:3000",
-    "https://anbruchit.com",
+    "https://anbruchit-backend-2.onrender.com",
 ]
 
 
@@ -155,8 +153,5 @@ CORS_ALLOW_HEADERS = [
 ]
 
 ALLOWED_HOSTS = [
-    "anbruchit-backend-2.onrender.com",
-    "www.anbruchit.com",
-    "anbruchit.com",
-
+    "https://anbruchit-backend-2.onrender.com",
 ]
