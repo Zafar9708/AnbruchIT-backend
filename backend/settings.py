@@ -24,7 +24,7 @@ DEBUG = True
 #     "localhost",
 #     "127.0.0.1",
 # ]
-ALLOWED_HOSTS = ["https://anbruchit-backend-2.onrender.com"]
+ALLOWED_HOSTS = ["https://www.anbruchit.com/"]
 # ALLOWED_HOSTS = ["anbruchit-backend-2.onrender.com"]
 # Application definition
 INSTALLED_APPS = [
@@ -40,9 +40,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -116,7 +116,7 @@ EMAIL_HOST_PASSWORD = 'wnzn amfa arao arwa'  # Use environment variables in prod
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://anbruchit-backend-2.onrender.com",
+    "https://www.anbruchit.com/"
     # "https://anbruchit-backend-2.onrender.com",
     # "anbruchit-backend-2.onrender.com",
 ]
