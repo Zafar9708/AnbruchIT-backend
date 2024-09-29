@@ -15,21 +15,18 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-i!qsgcd@5&*a%v81v&oefj7!^np$(2*m0(bt+2e)y*z!zv48d0'
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = [
+#     "anbruchit-backend-2.onrender.com",
+#     "localhost",
+#     "127.0.0.1",
+# ]
+ALLOWED_HOSTS = ["https://anbruchit-backend-2.onrender.com"]
 ALLOWED_HOSTS = ["anbruchit-backend-2.onrender.com"]
-
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,8 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'contact',
-     'corsheaders',
+    'contact',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -72,10 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
 # Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -83,10 +77,7 @@ DATABASES = {
     }
 }
 
-
 # Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -102,56 +93,44 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
-# https://docs.djangoproject.com/en/5.0/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
 STATIC_URL = 'static/'
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-
+# Email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'zafarekhlaque9708@gmail.com' 
-EMAIL_HOST_PASSWORD = 'wnzn amfa arao arwa' 
+EMAIL_HOST_USER = 'zafarekhlaque9708@gmail.com'
+EMAIL_HOST_PASSWORD = 'wnzn amfa arao arwa'  # Use environment variables in production!
 
-
-
-
+# CORS settings
 CORS_ALLOWED_ORIGINS = [
+    # "http://localhost:3000",
+    # "https://anbruchit-backend-2.onrender.com",
+    "https://anbruchit-backend-2.onrender.com",
     "anbruchit-backend-2.onrender.com",
 ]
 
-
 CORS_ALLOW_METHODS = [
-
     "POST",
-    
 ]
 
 CORS_ALLOW_HEADERS = [
     "content-type",
 ]
 
+
 ALLOWED_HOSTS = [
+    "https://anbruchit-backend-2.onrender.com",
     "anbruchit-backend-2.onrender.com",
 ]

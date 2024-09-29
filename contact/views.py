@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render
 
 # Create your views here.
@@ -11,6 +12,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 from django.conf import settings
 
+logger = logging.getLogger(__name__)
+
 @method_decorator(csrf_exempt, name='dispatch')
 class ContactView(View):
     def post(self, request):
@@ -22,7 +25,6 @@ class ContactView(View):
             email = json_data.get('email')
             message = json_data.get('message')
 
-            # Save to the database
             contact_form = ContactForm.objects.create(
                 company_name=company_name,
                 your_name=your_name,
@@ -30,15 +32,15 @@ class ContactView(View):
                 message=message
             )
 
-            # Send email
             subject = f"New message from {your_name} ({company_name})"
             email_message = f"Message from {your_name} ({email}):\n\n{message}"
-            recipient_list = ['zekhlaque@kloudrac.com']  # Your email address
+            recipient_list = ['zekhlaque@kloudrac.com']
             send_mail(subject, email_message, settings.EMAIL_HOST_USER, recipient_list)
 
             return JsonResponse({'success': True}, status=201)
 
         except Exception as e:
+            logger.error(f"Error in ContactView: {str(e)}")
             return JsonResponse({'error': str(e)}, status=400)
 
     def get(self, request):
