@@ -24,7 +24,7 @@ DEBUG = True
 #     "localhost",
 #     "127.0.0.1",
 # ]
-ALLOWED_HOSTS = ["https://www.anbruchit.com/"]
+ALLOWED_HOSTS = ["https://www.anbruchit.com"]
 # ALLOWED_HOSTS = ["anbruchit-backend-2.onrender.com"]
 # Application definition
 INSTALLED_APPS = [
@@ -116,7 +116,7 @@ EMAIL_HOST_PASSWORD = 'wnzn amfa arao arwa'  # Use environment variables in prod
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://www.anbruchit.com/"
+    "https://www.anbruchit.com"
     # "https://anbruchit-backend-2.onrender.com",
     # "anbruchit-backend-2.onrender.com",
 ]
