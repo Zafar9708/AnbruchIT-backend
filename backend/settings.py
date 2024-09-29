@@ -20,12 +20,12 @@ SECRET_KEY = 'django-insecure-i!qsgcd@5&*a%v81v&oefj7!^np$(2*m0(bt+2e)y*z!zv48d0
 DEBUG = True
 
 # ALLOWED_HOSTS = [
-#     "anbruchit-backend-2.onrender.com",
+#     # "anbruchit-backend-2.onrender.com",
 #     "localhost",
 #     "127.0.0.1",
 # ]
 ALLOWED_HOSTS = ["https://anbruchit-backend-2.onrender.com"]
-ALLOWED_HOSTS = ["anbruchit-backend-2.onrender.com"]
+# ALLOWED_HOSTS = ["anbruchit-backend-2.onrender.com"]
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -115,10 +115,10 @@ EMAIL_HOST_PASSWORD = 'wnzn amfa arao arwa'  # Use environment variables in prod
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
-    # "http://localhost:3000",
-    # "https://anbruchit-backend-2.onrender.com",
+    "http://localhost:3000",
     "https://anbruchit-backend-2.onrender.com",
-    "anbruchit-backend-2.onrender.com",
+    # "https://anbruchit-backend-2.onrender.com",
+    # "anbruchit-backend-2.onrender.com",
 ]
 
 CORS_ALLOW_METHODS = [
@@ -130,7 +130,8 @@ CORS_ALLOW_HEADERS = [
 ]
 
 
-ALLOWED_HOSTS = [
-    "https://anbruchit-backend-2.onrender.com",
-    "anbruchit-backend-2.onrender.com",
-]
+# ALLOWED_HOSTS = [
+#     "https://anbruchit-backend-2.onrender.com",
+#     "anbruchit-backend-2.onrender.com",
+# ],
+
